@@ -2,8 +2,10 @@
 module.exports = function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
-    var data = require('/custommodule');
-    context.log(data.myTestFunction());
+    //var data = require('/custommodule');
+    //context.log(data.myTestFunction());
+
+    context.log("temp message");
 
     if (req.query.name || (req.body && req.body.name)) {
         context.res = {
