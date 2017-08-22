@@ -5,6 +5,8 @@ module.exports = function (context, req) {
     var data = require('./azure-framework/custommodule');
     context.log(data.myTestFunction());
 
+    context.log('extra log');
+
     if (req.query.name || (req.body && req.body.name)) {
         context.res = {
             // status: 200, /* Defaults to 200 */
